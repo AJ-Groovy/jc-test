@@ -1,5 +1,350 @@
+@import 'base/variables.scss';
+@import 'base/fonts.scss';
+@import 'base/reset.scss';
 body {
-    background-color: #af02f0;
-    padding: 20px;
-    color: black
+    font-size: 14px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: $main-font;
 }
+
+.header,
+.footer {
+    flex-shrink: 0;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+h1,
+h2,
+h3,
+button,
+nav a,
+.company_name {
+    text-transform: uppercase;
+}
+
+.inner_wrapper {
+    max-width: $wide-wrapper;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: $main-color;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .inner_wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.logo_block {
+    flex: 7 0 auto;
+    padding: 39px 0px 39px 23px;
+    font-family: 'ralewaybold';
+    font-size: 26px;
+    a {
+        display: flex;
+        align-items: center;
+    }
+    .company_name {
+        padding-left: 31px;
+    }
+}
+
+.navigation {
+    flex: 5 0 auto;
+    ul {
+        display: flex;
+        flex: 3 0 auto;
+    }
+    a {
+        display: inline-block;
+        padding: 43px 0;
+        transition: .3s color ease-in-out;
+    }
+    a:hover {
+        color: $accent-color;
+    }
+    .nav_item {
+        flex: 1;
+        text-align: center;
+    }
+    .nav_item.active {
+        border-bottom: 2px solid $accent-color
+    }
+}
+
+.main {
+    .inner_wrapper {
+        max-width: $narrow-wrapper;
+    }
+}
+
+.banner {
+    .inner_wrapper {
+        max-width: $wide-wrapper;
+    }
+    background-image: url(../img/bg_header.jpg);
+    color: #fff;
+    font-family: 'ralewaybold';
+    font-size: 40px;
+    margin-bottom: 149px;
+    h1 {
+        padding: 85px 15px 158px
+    }
+}
+
+.secondary_header {
+    font-family: 'ralewaysemibold';
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 62px;
+    position: relative;
+}
+
+.secondary_header:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 80px;
+    background-color: $accent-color;
+    bottom: -28px;
+    left: 50%;
+    margin-left: -40px;
+}
+
+.reviews {
+    .secondary_header:after {
+        background-color: $main-color;
+    }
+}
+
+.management {
+    margin-bottom: 148px;
+    text-align: center;
+}
+
+.manager_items_section {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 45px;
+    flex-wrap: wrap;
+    .manager_item {
+        position: relative;
+        img {
+            margin-bottom: 26px;
+            display: block;
+        }
+    }
+    .manager_item:nth-child(2) {
+        left: 6px;
+    }
+}
+
+.mngr_info {
+    padding-left: 11px;
+    display: inline-block;
+    .mngr_name {
+        font-family: 'ralewaymedium';
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .mngr_position {
+        color: $accent_color;
+    }
+}
+
+.mngr_social {
+    display: inline-block;
+    .social .social_item {
+        background-color: #dedede;
+        border-color: #dedede;
+        box-sizing: border-box;
+        svg {
+            fill: #fff;
+        }
+    }
+}
+
+.btn_round {
+    font-size: 16px;
+    padding: 14px 39px;
+    position: relative;
+    left: 4px;
+    border: 1px solid $main-color;
+    background: transparent;
+    border-radius: 22px;
+}
+
+.footer {
+    color: $footer-text-color;
+    .footer_sections {
+        padding: 78px 0 55px;
+        background-color: #2b2f35;
+        .inner_wrapper {
+            max-width: $narrow_wrapper;
+            display: flex;
+            justify-content: space-between;
+            .about_block {
+                width: 29%;
+            }
+            .contacts_block {
+                width: 19%;
+            }
+            .subscribe_block {
+                width: 27%;
+                input {
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding: 10px;
+                    color: #fff;
+                }
+                input[type="text"] {
+                    background-color: transparent;
+                    border: 1px solid $footer-text-color;
+                    margin-bottom: 14px;
+                }
+                input[type="submit"] {
+                    background-color: $accent_color;
+                    border: none;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+                input::placeholder {
+                    color: $footer-text-color;
+                }
+            }
+        }
+        .footer_section_header {
+            color: $accent_color;
+            font-family: 'open_sanssemibold';
+            margin-bottom: 22px;
+        }
+        .text_content,
+        .address,
+        .contacts {
+            line-height: 1.7;
+        }
+        .address {
+            margin-bottom: 14px;
+        }
+    }
+    .links {
+        background-color: $main-color;
+        .inner_wrapper {
+            display: flex;
+            max-width: $narrow_wrapper;
+            justify-content: space-between;
+        }
+        .copyright {
+            padding: 25px 0;
+        }
+    }
+}
+
+.swiper-container {
+    width: 100%;
+    height: 400px;
+}
+
+.swiper-slide {
+    text-align: center;
+    padding-top: 32px;
+    img {
+        margin-bottom: 32px;
+    }
+    .review_text {
+        max-width: 80%;
+        margin: 0 auto 40px;
+        line-height: 1.5;
+    }
+    .review_author_name {
+        font-family: 'open_sanssemibold';
+        font-size: 16px;
+        color: $accent_color;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background-image: url(../img/arrow.png);
+    background-size: auto;
+    top: 99px;
+}
+
+.swiper-button-next {
+    right: -8px;
+}
+
+.swiper-button-prev {
+    transform: rotate(180deg);
+    left: -8px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    .social_item {
+        text-align: center;
+        width: 35px;
+        height: 35px;
+        margin-left: 8px;
+        border: 1px solid $footer-text-color;
+        border-radius: 50%;
+        position: relative;
+        transition: all .3s ease-in-out;
+        svg {
+            fill: $footer-text-color;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 50%;
+            margin-left: -10px;
+            top: 50%;
+            margin-top: -10px;
+            transition: all .3s ease-in-out;
+        }
+    }
+    .social_item.active {
+        background: $accent_color;
+        border: 1px solid $accent_color;
+        svg {
+            fill: #fff;
+        }
+    }
+    .social_item:hover {
+        border: 1px solid $accent_color;
+        cursor: pointer;
+        svg {
+            fill: $accent_color;
+        }
+    }
+}
+
+.btn, input[type="submit"] {
+    transition: .3s transform ease-in-out;
+}
+
+.btn:hover, input[type="submit"]:hover {
+    cursor: pointer;
+    transition: .3s all ease-in-out;
+    transform: scale(1.1);
+}
+
+.btn:hover {
+    background-color: $main-color;
+    color: #fff;
+}
+
+@import 'media.scss'
