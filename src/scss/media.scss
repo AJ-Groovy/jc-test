@@ -1,6 +1,4 @@
 @import 'base/variables.scss';
-
-
 @media screen and (max-width: 1170px) {
     .inner_wrapper {
         padding-left: 40px;
@@ -48,9 +46,25 @@
     }
 }
 
-@media screen and (max-width: 460px){
+@media screen and (min-width: 461px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .header {
+        position: relative;
+        .logo_block {
+            flex-basis: 70%;
+        }
+    }
+    .hamburger {
+        display: block;
+    }
     .navigation {
-        ul{
+        display: none;
+        ul {
             flex-direction: column;
             .nav_item {
                 border-bottom: 2px solid $accent_color;
@@ -59,5 +73,12 @@
                 }
             }
         }
+    }
+    .navigation.visible {
+        display: block;
+    }
+
+    .management {
+        margin-bottom: 75px;
     }
 }

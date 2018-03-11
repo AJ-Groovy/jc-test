@@ -1,0 +1,47 @@
+@import '../base/variables.scss';
+.reviews {
+    .secondary_header:after {
+        background-color: $main-color;
+    }
+}
+
+.swiper-container {
+    width: 100%;
+    height: 400px;
+}
+
+.swiper-slide {
+    text-align: center;
+    padding-top: 32px;
+    img {
+        margin-bottom: 32px;
+    }
+    .review_text {
+        max-width: 80%;
+        margin: 0 auto 40px;
+        line-height: 1.5;
+    }
+    .review_author_name {
+        font-family: 'open_sanssemibold';
+        font-size: 16px;
+        color: $accent_color;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background-image: url(../img/arrow.png);
+    background-size: auto;
+    top: 99px;
+}
+
+.swiper-button-next {
+    right: -8px;
+}
+
+.swiper-button-prev {
+    transform: rotate(180deg);
+    left: -8px;
+}

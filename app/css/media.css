@@ -29,10 +29,26 @@
       width: 100%;
       margin-bottom: 20px; } }
 
+@media screen and (min-width: 461px) {
+  .hamburger {
+    display: none; } }
+
 @media screen and (max-width: 460px) {
-  .navigation ul {
-    flex-direction: column; }
-    .navigation ul .nav_item {
-      border-bottom: 2px solid #b5a263; }
-      .navigation ul .nav_item a {
-        padding: 20px 0; } }
+  .header {
+    position: relative; }
+    .header .logo_block {
+      flex-basis: 70%; }
+  .hamburger {
+    display: block; }
+  .navigation {
+    display: none; }
+    .navigation ul {
+      flex-direction: column; }
+      .navigation ul .nav_item {
+        border-bottom: 2px solid #b5a263; }
+        .navigation ul .nav_item a {
+          padding: 20px 0; }
+  .navigation.visible {
+    display: block; }
+  .management {
+    margin-bottom: 75px; } }

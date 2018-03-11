@@ -1,0 +1,67 @@
+@import '../base/variables.scss';
+
+.footer {
+    color: $footer-text-color;
+    .footer_sections {
+        padding: 78px 0 55px;
+        background-color: #2b2f35;
+        .inner_wrapper {
+            max-width: $narrow_wrapper;
+            display: flex;
+            justify-content: space-between;
+            .about_block {
+                width: 29%;
+            }
+            .contacts_block {
+                width: 19%;
+            }
+            .subscribe_block {
+                width: 27%;
+                input {
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding: 10px;
+                    color: #fff;
+                }
+                input[type="text"] {
+                    background-color: transparent;
+                    border: 1px solid $footer-text-color;
+                    margin-bottom: 14px;
+                }
+                input[type="submit"] {
+                    background-color: $accent_color;
+                    border: none;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+                input::placeholder {
+                    color: $footer-text-color;
+                }
+            }
+        }
+        .footer_section_header {
+            color: $accent_color;
+            font-family: 'open_sanssemibold';
+            margin-bottom: 22px;
+        }
+        .text_content,
+        .address,
+        .contacts {
+            line-height: 1.7;
+        }
+        .address {
+            margin-bottom: 14px;
+        }
+    }
+    .links {
+        background-color: $main-color;
+        .inner_wrapper {
+            display: flex;
+            max-width: $narrow_wrapper;
+            justify-content: space-between;
+        }
+        .copyright {
+            padding: 25px 0;
+        }
+    }
+}

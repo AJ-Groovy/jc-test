@@ -1,0 +1,51 @@
+@import '../base/variables.scss';
+
+.header {
+    background-color: $main-color;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .inner_wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.logo_block {
+    flex: 7 0 auto;
+    padding: 39px 0px 39px 23px;
+    font-family: 'ralewaybold';
+    font-size: 26px;
+    a {
+        display: flex;
+        align-items: center;
+    }
+    .company_name {
+        padding-left: 31px;
+    }
+    
+}
+
+.navigation {
+    flex: 5 0 auto;
+    ul {
+        display: flex;
+        flex: 3 0 auto;
+    }
+    a {
+        display: inline-block;
+        padding: 43px 0;
+        transition: .3s color ease-in-out;
+    }
+    a:hover {
+        color: $accent-color;
+    }
+    .nav_item {
+        flex: 1;
+        text-align: center;
+    }
+    .nav_item.active {
+        border-bottom: 2px solid $accent-color
+    }
+}

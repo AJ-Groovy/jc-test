@@ -1,0 +1,35 @@
+.reviews .secondary_header:after {
+  background-color: #24282f; }
+
+.swiper-container {
+  width: 100%;
+  height: 400px; }
+
+.swiper-slide {
+  text-align: center;
+  padding-top: 32px; }
+  .swiper-slide img {
+    margin-bottom: 32px; }
+  .swiper-slide .review_text {
+    max-width: 80%;
+    margin: 0 auto 40px;
+    line-height: 1.5; }
+  .swiper-slide .review_author_name {
+    font-family: 'open_sanssemibold';
+    font-size: 16px;
+    color: #b5a263;
+    text-transform: uppercase;
+    margin-bottom: 15px; }
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-image: url(../img/arrow.png);
+  background-size: auto;
+  top: 99px; }
+
+.swiper-button-next {
+  right: -8px; }
+
+.swiper-button-prev {
+  transform: rotate(180deg);
+  left: -8px; }
